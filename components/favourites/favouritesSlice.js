@@ -10,6 +10,7 @@ const initialState = {
 const loadLikedMoviesFromStorage = async () => {
   try {
     const jsonMovies = await AsyncStorage.getItem('likedMovies');
+    console.log(jsonMovies)
     if (jsonMovies !== null) {
       const movies = JSON.parse(jsonMovies);
       return movies;
